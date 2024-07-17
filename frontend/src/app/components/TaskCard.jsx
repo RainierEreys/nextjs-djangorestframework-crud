@@ -12,6 +12,9 @@ function TaskCard({data}) {
             method: "POST",
         })
         console.log(res)
+        if(res.status === 200){
+            router.refresh();
+        }
     }
 
     const handleDelete = async (id) => {
